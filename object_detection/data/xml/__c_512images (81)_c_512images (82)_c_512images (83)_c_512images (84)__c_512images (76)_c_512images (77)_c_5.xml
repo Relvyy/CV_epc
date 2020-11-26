@@ -1,0 +1,206 @@
+<annotation>
+	<folder>512lighter</folder>
+	<filename>512images (81).jpg</filename>
+	<path>E:\512lighter\512images (81).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>512</width>
+		<height>512</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>275</xmin>
+			<ymin>38</ymin>
+			<xmax>364</xmax>
+			<ymax>448</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>614</xmin>
+			<ymin>121</ymin>
+			<xmax>638</xmax>
+			<ymax>258</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>247</xmin>
+			<ymin>542</ymin>
+			<xmax>278</xmax>
+			<ymax>753</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>761</xmin>
+			<ymin>621</ymin>
+			<xmax>825</xmax>
+			<ymax>779</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1179</xmin>
+			<ymin>229</ymin>
+			<xmax>1209</xmax>
+			<ymax>316</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1762</xmin>
+			<ymin>48</ymin>
+			<xmax>1806</xmax>
+			<ymax>282</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1249</xmin>
+			<ymin>566</ymin>
+			<xmax>1275</xmax>
+			<ymax>707</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1772</xmin>
+			<ymin>543</ymin>
+			<xmax>1798</xmax>
+			<ymax>637</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>175</xmin>
+			<ymin>1049</ymin>
+			<xmax>227</xmax>
+			<ymax>1194</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>593</xmin>
+			<ymin>1025</ymin>
+			<xmax>644</xmax>
+			<ymax>1233</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>233</xmin>
+			<ymin>1670</ymin>
+			<xmax>287</xmax>
+			<ymax>1798</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>732</xmin>
+			<ymin>1565</ymin>
+			<xmax>799</xmax>
+			<ymax>1748</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1126</xmin>
+			<ymin>1145</ymin>
+			<xmax>1150</xmax>
+			<ymax>1282</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1783</xmin>
+			<ymin>1054</ymin>
+			<xmax>1814</xmax>
+			<ymax>1265</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1273</xmin>
+			<ymin>1645</ymin>
+			<xmax>1337</xmax>
+			<ymax>1803</ymax>
+		</bndbox>
+	</object>
+<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1935</xmin>
+			<ymin>1613</ymin>
+			<xmax>2013</xmax>
+			<ymax>1850</ymax>
+		</bndbox>
+	</object>
+</annotation>

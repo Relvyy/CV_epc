@@ -1,0 +1,26 @@
+<annotation>
+	<folder>image</folder>
+	<filename>img701.jpg</filename>
+	<path>/home/epc/code/data/fire/image/img701.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>276</width>
+		<height>183</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>146</xmin>
+			<ymin>57</ymin>
+			<xmax>245</xmax>
+			<ymax>111</ymax>
+		</bndbox>
+	</object>
+</annotation>

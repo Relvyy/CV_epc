@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Annotations</folder>
+	<filename>img-50.jpg</filename>
+	<path>/home/epc/code/data/Annotations/img-50.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1000</width>
+		<height>932</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>362</xmin>
+			<ymin>48</ymin>
+			<xmax>816</xmax>
+			<ymax>907</ymax>
+		</bndbox>
+	</object>
+</annotation>

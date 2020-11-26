@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+	<folder>Annotations</folder>
+	<filename>img-168.jpg</filename>
+	<path>/home/epc/code/data/Annotations/img-168.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>447</width>
+		<height>299</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>166</xmin>
+			<ymin>92</ymin>
+			<xmax>232</xmax>
+			<ymax>222</ymax>
+		</bndbox>
+	</object>
+	</annotation>

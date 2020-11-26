@@ -1,0 +1,26 @@
+<annotation>
+	<folder>picture</folder>
+	<filename>fire_124.jpg</filename>
+	<path>/home/epc/code/people-counting-opencv/picture/fire_124.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>405</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>399</xmin>
+			<ymin>234</ymin>
+			<xmax>419</xmax>
+			<ymax>253</ymax>
+		</bndbox>
+	</object>
+</annotation>

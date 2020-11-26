@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>_512jmgzrtg_c_51210029_c_51210044_c_51210059.jpg</filename>
+	<path>E:\fire1231\images\_512jmgzrtg_c_51210029_c_51210044_c_51210059.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>309</xmin>
+			<ymin>36</ymin>
+			<xmax>352</xmax>
+			<ymax>433</ymax>
+		</bndbox>
+	</object>
+</annotation>

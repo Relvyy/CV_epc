@@ -1,0 +1,26 @@
+<annotation>
+	<folder>office_get_light</folder>
+	<filename>office_140.jpg</filename>
+	<path>E:\office_get_light\office_140.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1016</width>
+		<height>760</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>618</xmin>
+			<ymin>390</ymin>
+			<xmax>637</xmax>
+			<ymax>421</ymax>
+		</bndbox>
+	</object>
+</annotation>
