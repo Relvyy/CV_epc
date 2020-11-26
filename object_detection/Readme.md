@@ -1,8 +1,7 @@
 # Objects as Points
 Object detection, 3D detection, and pose estimation using center point detection:
 ![](readme/fig2.png)
-> [**Objects as Points**](http://arxiv.org/abs/1904.07850),            
-> Xingyi Zhou, Dequan Wang, Philipp Kr&auml;henb&uuml;hl,        
+> [**Objects as Points**](http://arxiv.org/abs/1904.07850),      
 > *arXiv technical report ([arXiv 1904.07850](http://arxiv.org/abs/1904.07850))*         
 
 
@@ -38,12 +37,11 @@ Detection identifies objects as axis-aligned boxes in an image. Most successful 
 
 All models and details are available in our [Model zoo](readme/MODEL_ZOO.md).
 
-## Installation
 
 # Installation
 
 
-The code was tested on Ubuntu 16.04, with [Anaconda](https://www.anaconda.com/download) Python 3.6 and [PyTorch]((http://pytorch.org/)) v0.4.1. NVIDIA GPUs are needed for both training and testing.
+The code was tested on Ubuntu 20.04/10, with [Anaconda](https://www.anaconda.com/download) Python 3.7 and [PyTorch]((http://pytorch.org/)) v0.4.1. NVIDIA GPUs are needed for both training and testing.
 After install Anaconda:
 
 0. [Optional but recommended] create a new conda environment. 
@@ -89,7 +87,7 @@ After install Anaconda:
 
     ~~~
     CenterNet_ROOT=/path/to/clone/CenterNet
-    git clone https://github.com/xingyizhou/CenterNet $CenterNet_ROOT
+    git clone https://github.com/Relvyy/Cv_epc $object_detection
     ~~~
 
 
@@ -129,9 +127,6 @@ For object detection on images/ video, run:
 ~~~
 python demo.py ctdet --demo /path/to/image/or/folder/or/video --load_model ../models/ctdet_coco_dla_2x.pth
 ~~~
-We provide example images in `CenterNet_ROOT/images/` (from [Detectron](https://github.com/facebookresearch/Detectron/tree/master/demo)). If set up correctly, the output should look like
-
-<p align="center"> <img src='readme/det1.png' align="center" height="230px"> <img src='readme/det2.png' align="center" height="230px"> </p>
 
 For webcam demo, run     
 
@@ -144,9 +139,6 @@ Similarly, for human pose estimation, run:
 ~~~
 python demo.py multi_pose --demo /path/to/image/or/folder/or/video/or/webcam --load_model ../models/multi_pose_dla_3x.pth
 ~~~
-The result for the example images should look like:
-
-<p align="center">  <img src='readme/pose1.png' align="center" height="200px"> <img src='readme/pose2.png' align="center" height="200px"> <img src='readme/pose3.png' align="center" height="200px">  </p>
 
 You can add `--debug 2` to visualize the heatmap outputs.
 You can add `--flip_test` for flip test.
