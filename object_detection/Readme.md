@@ -12,19 +12,6 @@ Contact: [zhouxy@cs.utexas.edu](mailto:zhouxy@cs.utexas.edu). Any questions or d
 
 Detection identifies objects as axis-aligned boxes in an image. Most successful object detectors enumerate a nearly exhaustive list of potential object locations and classify each. This is wasteful, inefficient, and requires additional post-processing. In this paper, we take a different approach. We model an object as a single point -- the center point of its bounding box. Our detector uses keypoint estimation to find center points and regresses to all other object properties, such as size, 3D location, orientation, and even pose. Our center point based approach, CenterNet, is end-to-end differentiable, simpler, faster, and more accurate than corresponding bounding box based detectors. CenterNet achieves the best speed-accuracy trade-off on the MS COCO dataset, with 28.1% AP at 142 FPS, 37.4% AP at 52 FPS, and 45.1% AP with multi-scale testing at 1.4 FPS. We use the same approach to estimate 3D bounding box in the KITTI benchmark and human pose on the COCO keypoint dataset. Our method performs competitively with sophisticated multi-stage methods and runs in real-time.
 
-## Highlights
-
-- **Simple:** One-sentence method summary: use keypoint detection technic to detect the bounding box center point and regress to all other object properties like bounding box size, 3d information, and pose.
-
-- **Versatile:** The same framework works for object detection, 3d bounding box estimation, and multi-person pose estimation with minor modification.
-
-- **Fast:** The whole process in a single network feedforward. No NMS post processing is needed. Our DLA-34 model runs at *52* FPS with *37.4* COCO AP.
-
-- **Strong**: Our best single model achieves *45.1*AP on COCO test-dev.
-
-- **Easy to use:** We provide user friendly testing API and webcam demos.
-
-## Main results
 
 ### Object Detection on COCO validation
 
@@ -53,7 +40,81 @@ All models and details are available in our [Model zoo](readme/MODEL_ZOO.md).
 
 ## Installation
 
-Please refer to [INSTALL.md](readme/INSTALL.md) for installation instructions.
+# Installation
+
+
+The code was tested on Ubuntu 16.04, with [Anaconda](https://www.anaconda.com/download) Python 3.6 and [PyTorch]((http://pytorch.org/)) v0.4.1. NVIDIA GPUs are needed for both training and testing.
+After install Anaconda:
+
+0. [Optional but recommended] create a new conda environment. 
+
+    ~~~
+    conda create --name CenterNet python=3.6
+    ~~~
+    And activate the environment.
+    
+    ~~~
+    conda activate CenterNet
+    ~~~
+
+1. Install pytorch0.4.1:
+
+    ~~~
+    conda install pytorch=0.4.1 torchvision -c pytorch
+    ~~~
+    
+    And disable cudnn batch normalization(Due to [this issue](https://github.com/xingyizhou/pytorch-pose-hg-3d/issues/16)).
+    
+     ~~~
+    # PYTORCH=/path/to/pytorch # usually ~/anaconda3/envs/CenterNet/lib/python3.6/site-packages/
+    # for pytorch v0.4.0
+    sed -i "1194s/torch\.backends\.cudnn\.enabled/False/g" ${PYTORCH}/torch/nn/functional.py
+    # for pytorch v0.4.1
+    sed -i "1254s/torch\.backends\.cudnn\.enabled/False/g" ${PYTORCH}/torch/nn/functional.py
+     ~~~
+     
+     For other pytorch version, you can manually open `torch/nn/functional.py` and find the line with `torch.batch_norm` and replace the `torch.backends.cudnn.enabled` with `False`. We observed slight worse training results without doing so. 
+     
+2. Install [COCOAPI](https://github.com/cocodataset/cocoapi):
+
+    ~~~
+    # COCOAPI=/path/to/clone/cocoapi
+    git clone https://github.com/cocodataset/cocoapi.git $COCOAPI
+    cd $COCOAPI/PythonAPI
+    make
+    python setup.py install --user
+    ~~~
+
+3. Clone this repo:
+
+    ~~~
+    CenterNet_ROOT=/path/to/clone/CenterNet
+    git clone https://github.com/xingyizhou/CenterNet $CenterNet_ROOT
+    ~~~
+
+
+4. Install the requirements
+
+    ~~~
+    pip install -r requirements.txt
+    ~~~
+    
+    
+5. Compile deformable convolutional (from [DCNv2](https://github.com/CharlesShang/DCNv2/tree/pytorch_0.4)).
+
+    ~~~
+    cd $CenterNet_ROOT/src/lib/models/networks/DCNv2
+    ./make.sh
+    ~~~
+6. [Optional, only required if you are using extremenet or multi-scale testing] Compile NMS if your want to use multi-scale testing or test ExtremeNet.
+
+    ~~~
+    cd $CenterNet_ROOT/src/lib/external
+    make
+    ~~~
+
+7. Download pertained models for [detection]() or [pose estimation]() and move them to `$CenterNet_ROOT/models/`. More models can be found in [Model zoo](MODEL_ZOO.md).
+
 
 ## Use CenterNet
 
@@ -125,18 +186,3 @@ If you are interested in training CenterNet in a new dataset, use CenterNet in a
 - CenterNet + DeepSORT tracking implementation: [centerNet-deep-sort](https://github.com/kimyoon-young/centerNet-deep-sort) from [kimyoon-young](https://github.com/kimyoon-young).
 - Blogs on training CenterNet on custom datasets (in Chinese): [ships](https://blog.csdn.net/weixin_42634342/article/details/97756458) from [Rhett Chen](https://blog.csdn.net/weixin_42634342) and [faces](https://blog.csdn.net/weixin_41765699/article/details/100118353) from [linbior](https://me.csdn.net/weixin_41765699).
 
-## License
-
-CenterNet itself is released under the MIT License (refer to the LICENSE file for details).
-Portions of the code are borrowed from [human-pose-estimation.pytorch](https://github.com/Microsoft/human-pose-estimation.pytorch) (image transform, resnet), [CornerNet](https://github.com/princeton-vl/CornerNet) (hourglassnet, loss functions), [dla](https://github.com/ucbdrive/dla) (DLA network), [DCNv2](https://github.com/CharlesShang/DCNv2)(deformable convolutions), [tf-faster-rcnn](https://github.com/endernewton/tf-faster-rcnn)(Pascal VOC evaluation) and [kitti_eval](https://github.com/prclibo/kitti_eval) (KITTI dataset evaluation). Please refer to the original License of these projects (See [NOTICE](NOTICE)).
-
-## Citation
-
-If you find this project useful for your research, please use the following BibTeX entry.
-
-    @inproceedings{zhou2019objects,
-      title={Objects as Points},
-      author={Zhou, Xingyi and Wang, Dequan and Kr{\"a}henb{\"u}hl, Philipp},
-      booktitle={arXiv preprint arXiv:1904.07850},
-      year={2019}
-    }
